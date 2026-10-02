@@ -1,5 +1,5 @@
 # Conflict-Aware Graph RAG (Neo4j + FastAPI)
- Contradiction-Aware Graph RAG System with Neo4j, FastAPI, and Python
+
 Enterprise docs contradict each other ("timeout = 30s" in a 2022 runbook, "60s" in a 2024 ADR). Plain vector RAG
 retrieves top-K chunks and **silently picks one**. This project models every statement as a first-class
 `Fact` node with provenance (`value, source, timestamp, confidence`) so that **conflict detection is a structural
@@ -91,3 +91,6 @@ in `evaluation_results.json` are the source of truth.
 ## Limitations
 Deterministic resolver needs the question to name the entity/attribute tokens (an LLM/full-text fallback covers synonyms);
 conflict = distinct normalized values, so "30s" vs "30 seconds" would count as a conflict (needs value canonicalization).
+
+## youtude video
+[click here](https://youtu.be/HwSZDCyI_r4)
