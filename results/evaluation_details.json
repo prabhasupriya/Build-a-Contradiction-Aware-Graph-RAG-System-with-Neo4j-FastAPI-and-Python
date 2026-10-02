@@ -1,0 +1,436 @@
+{
+  "pinned_config": {
+    "llm_model_id": "gpt-4o-mini",
+    "llm_enabled": false,
+    "embedding_backend": "local",
+    "embedding_model_id": "text-embedding-3-small",
+    "top_k": "3",
+    "judge": "regex-v1",
+    "dataset_sha256": "6eb37396d3c0cd809fdf7d12d225d96bcbaa059f6580f65629402b4692c707d8"
+  },
+  "counts": {
+    "conflict_questions": 10,
+    "tp": 10,
+    "fp": 0,
+    "silent_picks": 10,
+    "graph_status_accuracy_all": 1.0
+  },
+  "rows": [
+    {
+      "question": "What is the API timeout for the payments service?",
+      "gold_status": "conflict",
+      "graph_http": 200,
+      "graph_status": "conflict",
+      "graph_response": {
+        "answer": "Sources disagree: architecture-doc-v2.pdf (2023-01) states 30s; runbook-2024.md (2024-06) states 60s. By the resolution heuristic (most recent timestamp, confidence as tie-break), the most recent source runbook-2024.md (2024-06, confidence 0.9) suggests 60s, but this should be verified.",
+        "agreement_status": "conflict",
+        "sources": [
+          {
+            "value": "30s",
+            "source": "architecture-doc-v2.pdf",
+            "timestamp": "2023-01"
+          },
+          {
+            "value": "60s",
+            "source": "runbook-2024.md",
+            "timestamp": "2024-06"
+          }
+        ]
+      },
+      "baseline_answer": "The API timeout for the payments service is strictly set to 30s.",
+      "baseline_verdict": "silent_pick"
+    },
+    {
+      "question": "What is the database connection timeout?",
+      "gold_status": "conflict",
+      "graph_http": 200,
+      "graph_status": "conflict",
+      "graph_response": {
+        "answer": "Sources disagree: runbook-2022.md (2022-03) states 30s; adr-014-db-timeouts.md (2024-02) states 60s. By the resolution heuristic (most recent timestamp, confidence as tie-break), the most recent source adr-014-db-timeouts.md (2024-02, confidence 0.9) suggests 60s, but this should be verified.",
+        "agreement_status": "conflict",
+        "sources": [
+          {
+            "value": "30s",
+            "source": "runbook-2022.md",
+            "timestamp": "2022-03"
+          },
+          {
+            "value": "60s",
+            "source": "adr-014-db-timeouts.md",
+            "timestamp": "2024-02"
+          }
+        ]
+      },
+      "baseline_answer": "The database connection timeout is 30s.",
+      "baseline_verdict": "silent_pick"
+    },
+    {
+      "question": "What is the token expiry of the auth service?",
+      "gold_status": "conflict",
+      "graph_http": 200,
+      "graph_status": "conflict",
+      "graph_response": {
+        "answer": "Sources disagree: security-policy-2022.pdf (2022-09) states 15m; auth-redesign-adr-2024.md (2024-04) states 60m. By the resolution heuristic (most recent timestamp, confidence as tie-break), the most recent source auth-redesign-adr-2024.md (2024-04, confidence 0.9) suggests 60m, but this should be verified.",
+        "agreement_status": "conflict",
+        "sources": [
+          {
+            "value": "15m",
+            "source": "security-policy-2022.pdf",
+            "timestamp": "2022-09"
+          },
+          {
+            "value": "60m",
+            "source": "auth-redesign-adr-2024.md",
+            "timestamp": "2024-04"
+          }
+        ]
+      },
+      "baseline_answer": "The token expiry of the auth service is set to 60m.",
+      "baseline_verdict": "silent_pick"
+    },
+    {
+      "question": "What is the rate limit on the API gateway?",
+      "gold_status": "conflict",
+      "graph_http": 200,
+      "graph_status": "conflict",
+      "graph_response": {
+        "answer": "Sources disagree: gateway-handbook-2022.pdf (2022-11) states 100 req/min; gateway-config-2024.yaml (2024-08) states 500 req/min. By the resolution heuristic (most recent timestamp, confidence as tie-break), the most recent source gateway-config-2024.yaml (2024-08, confidence 0.95) suggests 500 req/min, but this should be verified.",
+        "agreement_status": "conflict",
+        "sources": [
+          {
+            "value": "100 req/min",
+            "source": "gateway-handbook-2022.pdf",
+            "timestamp": "2022-11"
+          },
+          {
+            "value": "500 req/min",
+            "source": "gateway-config-2024.yaml",
+            "timestamp": "2024-08"
+          }
+        ]
+      },
+      "baseline_answer": "The rate limit of the api gateway is set to 100 req/min.",
+      "baseline_verdict": "silent_pick"
+    },
+    {
+      "question": "What is the TTL of the cache cluster?",
+      "gold_status": "conflict",
+      "graph_http": 200,
+      "graph_status": "conflict",
+      "graph_response": {
+        "answer": "Sources disagree: cache-guide-2023.md (2023-05) states 300s; platform-wiki-2024.md (2024-03) states 600s. By the resolution heuristic (most recent timestamp, confidence as tie-break), the most recent source platform-wiki-2024.md (2024-03, confidence 0.85) suggests 600s, but this should be verified.",
+        "agreement_status": "conflict",
+        "sources": [
+          {
+            "value": "300s",
+            "source": "cache-guide-2023.md",
+            "timestamp": "2023-05"
+          },
+          {
+            "value": "600s",
+            "source": "platform-wiki-2024.md",
+            "timestamp": "2024-03"
+          }
+        ]
+      },
+      "baseline_answer": "The ttl of the cache cluster is set to 600s.",
+      "baseline_verdict": "silent_pick"
+    },
+    {
+      "question": "What is the retention period for the order queue?",
+      "gold_status": "conflict",
+      "graph_http": 200,
+      "graph_status": "conflict",
+      "graph_response": {
+        "answer": "Sources disagree: queue-spec-v1.pdf (2022-06) states 7 days; queue-spec-v2.pdf (2024-01) states 14 days. By the resolution heuristic (most recent timestamp, confidence as tie-break), the most recent source queue-spec-v2.pdf (2024-01, confidence 0.9) suggests 14 days, but this should be verified.",
+        "agreement_status": "conflict",
+        "sources": [
+          {
+            "value": "7 days",
+            "source": "queue-spec-v1.pdf",
+            "timestamp": "2022-06"
+          },
+          {
+            "value": "14 days",
+            "source": "queue-spec-v2.pdf",
+            "timestamp": "2024-01"
+          }
+        ]
+      },
+      "baseline_answer": "The retention period of the order queue is set to 7 days.",
+      "baseline_verdict": "silent_pick"
+    },
+    {
+      "question": "Which email provider does the notification service use?",
+      "gold_status": "conflict",
+      "graph_http": 200,
+      "graph_status": "conflict",
+      "graph_response": {
+        "answer": "Sources disagree: vendor-list-2022.xlsx (2022-08) states SendGrid; vendor-migration-adr-2024.md (2024-05) states Amazon SES. By the resolution heuristic (most recent timestamp, confidence as tie-break), the most recent source vendor-migration-adr-2024.md (2024-05, confidence 0.9) suggests Amazon SES, but this should be verified.",
+        "agreement_status": "conflict",
+        "sources": [
+          {
+            "value": "SendGrid",
+            "source": "vendor-list-2022.xlsx",
+            "timestamp": "2022-08"
+          },
+          {
+            "value": "Amazon SES",
+            "source": "vendor-migration-adr-2024.md",
+            "timestamp": "2024-05"
+          }
+        ]
+      },
+      "baseline_answer": "The email provider of the notification service is set to SendGrid.",
+      "baseline_verdict": "silent_pick"
+    },
+    {
+      "question": "What is the replica count of the search index?",
+      "gold_status": "conflict",
+      "graph_http": 200,
+      "graph_status": "conflict",
+      "graph_response": {
+        "answer": "Sources disagree: search-runbook-2023.md (2023-02) states 2; search-capacity-plan-2024.pdf (2024-07) states 3. By the resolution heuristic (most recent timestamp, confidence as tie-break), the most recent source search-capacity-plan-2024.pdf (2024-07, confidence 0.85) suggests 3, but this should be verified.",
+        "agreement_status": "conflict",
+        "sources": [
+          {
+            "value": "2",
+            "source": "search-runbook-2023.md",
+            "timestamp": "2023-02"
+          },
+          {
+            "value": "3",
+            "source": "search-capacity-plan-2024.pdf",
+            "timestamp": "2024-07"
+          }
+        ]
+      },
+      "baseline_answer": "The replica count of the search index is set to 3.",
+      "baseline_verdict": "silent_pick"
+    },
+    {
+      "question": "What is the payment grace period for the billing service?",
+      "gold_status": "conflict",
+      "graph_http": 200,
+      "graph_status": "conflict",
+      "graph_response": {
+        "answer": "Sources disagree: billing-policy-2022.pdf (2022-12) states 7 days; billing-policy-2024.pdf (2024-09) states 14 days. By the resolution heuristic (most recent timestamp, confidence as tie-break), the most recent source billing-policy-2024.pdf (2024-09, confidence 0.9) suggests 14 days, but this should be verified.",
+        "agreement_status": "conflict",
+        "sources": [
+          {
+            "value": "7 days",
+            "source": "billing-policy-2022.pdf",
+            "timestamp": "2022-12"
+          },
+          {
+            "value": "14 days",
+            "source": "billing-policy-2024.pdf",
+            "timestamp": "2024-09"
+          }
+        ]
+      },
+      "baseline_answer": "The payment grace period of the billing service is set to 14 days.",
+      "baseline_verdict": "silent_pick"
+    },
+    {
+      "question": "What is the backup frequency of file storage?",
+      "gold_status": "conflict",
+      "graph_http": 200,
+      "graph_status": "conflict",
+      "graph_response": {
+        "answer": "Sources disagree: storage-ops-2023.md (2023-07) states daily; dr-plan-2024.pdf (2024-04) states hourly. By the resolution heuristic (most recent timestamp, confidence as tie-break), the most recent source dr-plan-2024.pdf (2024-04, confidence 0.9) suggests hourly, but this should be verified.",
+        "agreement_status": "conflict",
+        "sources": [
+          {
+            "value": "daily",
+            "source": "storage-ops-2023.md",
+            "timestamp": "2023-07"
+          },
+          {
+            "value": "hourly",
+            "source": "dr-plan-2024.pdf",
+            "timestamp": "2024-04"
+          }
+        ]
+      },
+      "baseline_answer": "The backup frequency of the file storage is set to daily.",
+      "baseline_verdict": "silent_pick"
+    },
+    {
+      "question": "What is the eviction policy of the cache cluster?",
+      "gold_status": "agree",
+      "graph_http": 200,
+      "graph_status": "agree",
+      "graph_response": {
+        "answer": "All 2 sources agree: the value is LRU (per cache-guide-2023.md (2023-05), platform-wiki-2024.md (2024-03)).",
+        "agreement_status": "agree",
+        "sources": [
+          {
+            "value": "LRU",
+            "source": "cache-guide-2023.md",
+            "timestamp": "2023-05"
+          },
+          {
+            "value": "LRU",
+            "source": "platform-wiki-2024.md",
+            "timestamp": "2024-03"
+          }
+        ]
+      },
+      "baseline_answer": "The eviction policy of the cache cluster is set to LRU.",
+      "baseline_verdict": null
+    },
+    {
+      "question": "What is the refresh interval of the search index?",
+      "gold_status": "agree",
+      "graph_http": 200,
+      "graph_status": "agree",
+      "graph_response": {
+        "answer": "All 2 sources agree: the value is 1s (per search-runbook-2023.md (2023-02), search-capacity-plan-2024.pdf (2024-07)).",
+        "agreement_status": "agree",
+        "sources": [
+          {
+            "value": "1s",
+            "source": "search-runbook-2023.md",
+            "timestamp": "2023-02"
+          },
+          {
+            "value": "1s",
+            "source": "search-capacity-plan-2024.pdf",
+            "timestamp": "2024-07"
+          }
+        ]
+      },
+      "baseline_answer": "The refresh interval of the search index is set to 1s.",
+      "baseline_verdict": null
+    },
+    {
+      "question": "What is the invoice currency of the billing service?",
+      "gold_status": "agree",
+      "graph_http": 200,
+      "graph_status": "agree",
+      "graph_response": {
+        "answer": "All 2 sources agree: the value is USD (per billing-policy-2022.pdf (2022-12), billing-policy-2024.pdf (2024-09)).",
+        "agreement_status": "agree",
+        "sources": [
+          {
+            "value": "USD",
+            "source": "billing-policy-2022.pdf",
+            "timestamp": "2022-12"
+          },
+          {
+            "value": "USD",
+            "source": "billing-policy-2024.pdf",
+            "timestamp": "2024-09"
+          }
+        ]
+      },
+      "baseline_answer": "The invoice currency of the billing service is set to USD.",
+      "baseline_verdict": null
+    },
+    {
+      "question": "What is the max retries for the payments service?",
+      "gold_status": "single-source",
+      "graph_http": 200,
+      "graph_status": "single-source",
+      "graph_response": {
+        "answer": "Only one source covers this: architecture-doc-v2.pdf (2023-01) states 3.",
+        "agreement_status": "single-source",
+        "sources": [
+          {
+            "value": "3",
+            "source": "architecture-doc-v2.pdf",
+            "timestamp": "2023-01"
+          }
+        ]
+      },
+      "baseline_answer": "The max retries of the payments service is set to 3.",
+      "baseline_verdict": null
+    },
+    {
+      "question": "What hashing algorithm does the auth service use?",
+      "gold_status": "single-source",
+      "graph_http": 200,
+      "graph_status": "single-source",
+      "graph_response": {
+        "answer": "Only one source covers this: security-policy-2022.pdf (2022-09) states bcrypt.",
+        "agreement_status": "single-source",
+        "sources": [
+          {
+            "value": "bcrypt",
+            "source": "security-policy-2022.pdf",
+            "timestamp": "2022-09"
+          }
+        ]
+      },
+      "baseline_answer": "The hashing algorithm of the auth service is set to bcrypt.",
+      "baseline_verdict": null
+    },
+    {
+      "question": "What is the batch size of the notification service?",
+      "gold_status": "single-source",
+      "graph_http": 200,
+      "graph_status": "single-source",
+      "graph_response": {
+        "answer": "Only one source covers this: vendor-migration-adr-2024.md (2024-05) states 500.",
+        "agreement_status": "single-source",
+        "sources": [
+          {
+            "value": "500",
+            "source": "vendor-migration-adr-2024.md",
+            "timestamp": "2024-05"
+          }
+        ]
+      },
+      "baseline_answer": "The batch size of the notification service is set to 500.",
+      "baseline_verdict": null
+    },
+    {
+      "question": "What is the log format of the logging pipeline?",
+      "gold_status": "single-source",
+      "graph_http": 200,
+      "graph_status": "single-source",
+      "graph_response": {
+        "answer": "Only one source covers this: observability-guide-2022.md (2022-10) states JSON.",
+        "agreement_status": "single-source",
+        "sources": [
+          {
+            "value": "JSON",
+            "source": "observability-guide-2022.md",
+            "timestamp": "2022-10"
+          }
+        ]
+      },
+      "baseline_answer": "The log format of the logging pipeline is set to JSON.",
+      "baseline_verdict": null
+    },
+    {
+      "question": "What is the quantum flux capacity of the hyperdrive server?",
+      "gold_status": "none",
+      "graph_http": 404,
+      "graph_status": "none",
+      "graph_response": {
+        "error": "no_facts_found",
+        "message": "I couldn't find any facts for that entity/attribute in the knowledge graph.",
+        "answer": "I couldn't find any facts for that entity/attribute in the knowledge graph.",
+        "sources": []
+      },
+      "baseline_answer": "The refresh interval of the search index is set to 1s.",
+      "baseline_verdict": null
+    },
+    {
+      "question": "What is the warp core temperature of the teleporter?",
+      "gold_status": "none",
+      "graph_http": 404,
+      "graph_status": "none",
+      "graph_response": {
+        "error": "no_facts_found",
+        "message": "I couldn't find any facts for that entity/attribute in the knowledge graph.",
+        "answer": "I couldn't find any facts for that entity/attribute in the knowledge graph.",
+        "sources": []
+      },
+      "baseline_answer": "The query timeout of the analytics warehouse is set to 300s.",
+      "baseline_verdict": null
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "total_questions_tested": 19,
+  "graph_rag_conflict_recall": 1.0,
+  "baseline_silent_pick_rate": 1.0,
+  "example_conflict_handled": {
+    "question": "What is the API timeout for the payments service?",
+    "graph_response": {
+      "answer": "Sources disagree: architecture-doc-v2.pdf (2023-01) states 30s; runbook-2024.md (2024-06) states 60s. By the resolution heuristic (most recent timestamp, confidence as tie-break), the most recent source runbook-2024.md (2024-06, confidence 0.9) suggests 60s, but this should be verified.",
+      "agreement_status": "conflict",
+      "sources": [
+        {
+          "value": "30s",
+          "source": "architecture-doc-v2.pdf",
+          "timestamp": "2023-01"
+        },
+        {
+          "value": "60s",
+          "source": "runbook-2024.md",
+          "timestamp": "2024-06"
+        }
+      ]
+    },
+    "baseline_response": "The API timeout for the payments service is strictly set to 30s."
+  },
+  "graph_rag_conflict_precision": 1.0
+}

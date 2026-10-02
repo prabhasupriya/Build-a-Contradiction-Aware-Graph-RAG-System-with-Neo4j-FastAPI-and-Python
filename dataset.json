@@ -1,0 +1,362 @@
+[
+  {
+    "entity": "payments_service",
+    "attribute": "api_timeout",
+    "value": "30s",
+    "source": "architecture-doc-v2.pdf",
+    "timestamp": "2023-01",
+    "confidence": 0.8,
+    "context_text": "The API timeout for the payments service is strictly set to 30s."
+  },
+  {
+    "entity": "payments_service",
+    "attribute": "api_timeout",
+    "value": "60s",
+    "source": "runbook-2024.md",
+    "timestamp": "2024-06",
+    "confidence": 0.9,
+    "context_text": "Per the latest runbook, the payments service API timeout was raised to 60s."
+  },
+  {
+    "entity": "primary_database",
+    "attribute": "connection_timeout",
+    "value": "30s",
+    "source": "runbook-2022.md",
+    "timestamp": "2022-03",
+    "confidence": 0.7,
+    "context_text": "The database connection timeout is 30s."
+  },
+  {
+    "entity": "primary_database",
+    "attribute": "connection_timeout",
+    "value": "60s",
+    "source": "adr-014-db-timeouts.md",
+    "timestamp": "2024-02",
+    "confidence": 0.9,
+    "context_text": "ADR-014 updates the database connection timeout to 60s."
+  },
+  {
+    "entity": "auth_service",
+    "attribute": "token_expiry",
+    "value": "15m",
+    "source": "security-policy-2022.pdf",
+    "timestamp": "2022-09",
+    "confidence": 0.75,
+    "context_text": "The token expiry of the auth service is set to 15m."
+  },
+  {
+    "entity": "auth_service",
+    "attribute": "token_expiry",
+    "value": "60m",
+    "source": "auth-redesign-adr-2024.md",
+    "timestamp": "2024-04",
+    "confidence": 0.9,
+    "context_text": "The token expiry of the auth service is set to 60m."
+  },
+  {
+    "entity": "api_gateway",
+    "attribute": "rate_limit",
+    "value": "100 req/min",
+    "source": "gateway-handbook-2022.pdf",
+    "timestamp": "2022-11",
+    "confidence": 0.7,
+    "context_text": "The rate limit of the api gateway is set to 100 req/min."
+  },
+  {
+    "entity": "api_gateway",
+    "attribute": "rate_limit",
+    "value": "500 req/min",
+    "source": "gateway-config-2024.yaml",
+    "timestamp": "2024-08",
+    "confidence": 0.95,
+    "context_text": "The rate limit of the api gateway is set to 500 req/min."
+  },
+  {
+    "entity": "cache_cluster",
+    "attribute": "ttl",
+    "value": "300s",
+    "source": "cache-guide-2023.md",
+    "timestamp": "2023-05",
+    "confidence": 0.8,
+    "context_text": "The ttl of the cache cluster is set to 300s."
+  },
+  {
+    "entity": "cache_cluster",
+    "attribute": "ttl",
+    "value": "600s",
+    "source": "platform-wiki-2024.md",
+    "timestamp": "2024-03",
+    "confidence": 0.85,
+    "context_text": "The ttl of the cache cluster is set to 600s."
+  },
+  {
+    "entity": "order_queue",
+    "attribute": "retention_period",
+    "value": "7 days",
+    "source": "queue-spec-v1.pdf",
+    "timestamp": "2022-06",
+    "confidence": 0.7,
+    "context_text": "The retention period of the order queue is set to 7 days."
+  },
+  {
+    "entity": "order_queue",
+    "attribute": "retention_period",
+    "value": "14 days",
+    "source": "queue-spec-v2.pdf",
+    "timestamp": "2024-01",
+    "confidence": 0.9,
+    "context_text": "The retention period of the order queue is set to 14 days."
+  },
+  {
+    "entity": "notification_service",
+    "attribute": "email_provider",
+    "value": "SendGrid",
+    "source": "vendor-list-2022.xlsx",
+    "timestamp": "2022-08",
+    "confidence": 0.7,
+    "context_text": "The email provider of the notification service is set to SendGrid."
+  },
+  {
+    "entity": "notification_service",
+    "attribute": "email_provider",
+    "value": "Amazon SES",
+    "source": "vendor-migration-adr-2024.md",
+    "timestamp": "2024-05",
+    "confidence": 0.9,
+    "context_text": "The email provider of the notification service is set to Amazon SES."
+  },
+  {
+    "entity": "search_index",
+    "attribute": "replica_count",
+    "value": "2",
+    "source": "search-runbook-2023.md",
+    "timestamp": "2023-02",
+    "confidence": 0.8,
+    "context_text": "The replica count of the search index is set to 2."
+  },
+  {
+    "entity": "search_index",
+    "attribute": "replica_count",
+    "value": "3",
+    "source": "search-capacity-plan-2024.pdf",
+    "timestamp": "2024-07",
+    "confidence": 0.85,
+    "context_text": "The replica count of the search index is set to 3."
+  },
+  {
+    "entity": "billing_service",
+    "attribute": "payment_grace_period",
+    "value": "7 days",
+    "source": "billing-policy-2022.pdf",
+    "timestamp": "2022-12",
+    "confidence": 0.8,
+    "context_text": "The payment grace period of the billing service is set to 7 days."
+  },
+  {
+    "entity": "billing_service",
+    "attribute": "payment_grace_period",
+    "value": "14 days",
+    "source": "billing-policy-2024.pdf",
+    "timestamp": "2024-09",
+    "confidence": 0.9,
+    "context_text": "The payment grace period of the billing service is set to 14 days."
+  },
+  {
+    "entity": "file_storage",
+    "attribute": "backup_frequency",
+    "value": "daily",
+    "source": "storage-ops-2023.md",
+    "timestamp": "2023-07",
+    "confidence": 0.8,
+    "context_text": "The backup frequency of the file storage is set to daily."
+  },
+  {
+    "entity": "file_storage",
+    "attribute": "backup_frequency",
+    "value": "hourly",
+    "source": "dr-plan-2024.pdf",
+    "timestamp": "2024-04",
+    "confidence": 0.9,
+    "context_text": "The backup frequency of the file storage is set to hourly."
+  },
+  {
+    "entity": "logging_pipeline",
+    "attribute": "log_retention",
+    "value": "30 days",
+    "source": "observability-guide-2022.md",
+    "timestamp": "2022-10",
+    "confidence": 0.75,
+    "context_text": "The log retention of the logging pipeline is set to 30 days."
+  },
+  {
+    "entity": "logging_pipeline",
+    "attribute": "log_retention",
+    "value": "90 days",
+    "source": "compliance-update-2024.pdf",
+    "timestamp": "2024-02",
+    "confidence": 0.95,
+    "context_text": "The log retention of the logging pipeline is set to 90 days."
+  },
+  {
+    "entity": "analytics_warehouse",
+    "attribute": "refresh_schedule",
+    "value": "nightly",
+    "source": "data-platform-doc-2023.md",
+    "timestamp": "2023-03",
+    "confidence": 0.8,
+    "context_text": "The refresh schedule of the analytics warehouse is set to nightly."
+  },
+  {
+    "entity": "analytics_warehouse",
+    "attribute": "refresh_schedule",
+    "value": "every 6 hours",
+    "source": "data-platform-doc-2024.md",
+    "timestamp": "2024-06",
+    "confidence": 0.85,
+    "context_text": "The refresh schedule of the analytics warehouse is set to every 6 hours."
+  },
+  {
+    "entity": "cache_cluster",
+    "attribute": "eviction_policy",
+    "value": "LRU",
+    "source": "cache-guide-2023.md",
+    "timestamp": "2023-05",
+    "confidence": 0.8,
+    "context_text": "The eviction policy of the cache cluster is set to LRU."
+  },
+  {
+    "entity": "cache_cluster",
+    "attribute": "eviction_policy",
+    "value": "LRU",
+    "source": "platform-wiki-2024.md",
+    "timestamp": "2024-03",
+    "confidence": 0.85,
+    "context_text": "The eviction policy of the cache cluster is set to LRU."
+  },
+  {
+    "entity": "search_index",
+    "attribute": "refresh_interval",
+    "value": "1s",
+    "source": "search-runbook-2023.md",
+    "timestamp": "2023-02",
+    "confidence": 0.8,
+    "context_text": "The refresh interval of the search index is set to 1s."
+  },
+  {
+    "entity": "search_index",
+    "attribute": "refresh_interval",
+    "value": "1s",
+    "source": "search-capacity-plan-2024.pdf",
+    "timestamp": "2024-07",
+    "confidence": 0.85,
+    "context_text": "The refresh interval of the search index is set to 1s."
+  },
+  {
+    "entity": "billing_service",
+    "attribute": "invoice_currency",
+    "value": "USD",
+    "source": "billing-policy-2022.pdf",
+    "timestamp": "2022-12",
+    "confidence": 0.8,
+    "context_text": "The invoice currency of the billing service is set to USD."
+  },
+  {
+    "entity": "billing_service",
+    "attribute": "invoice_currency",
+    "value": "USD",
+    "source": "billing-policy-2024.pdf",
+    "timestamp": "2024-09",
+    "confidence": 0.9,
+    "context_text": "The invoice currency of the billing service is set to USD."
+  },
+  {
+    "entity": "analytics_warehouse",
+    "attribute": "query_timeout",
+    "value": "300s",
+    "source": "data-platform-doc-2023.md",
+    "timestamp": "2023-03",
+    "confidence": 0.8,
+    "context_text": "The query timeout of the analytics warehouse is set to 300s."
+  },
+  {
+    "entity": "analytics_warehouse",
+    "attribute": "query_timeout",
+    "value": "300s",
+    "source": "data-platform-doc-2024.md",
+    "timestamp": "2024-06",
+    "confidence": 0.85,
+    "context_text": "The query timeout of the analytics warehouse is set to 300s."
+  },
+  {
+    "entity": "payments_service",
+    "attribute": "max_retries",
+    "value": "3",
+    "source": "architecture-doc-v2.pdf",
+    "timestamp": "2023-01",
+    "confidence": 0.8,
+    "context_text": "The max retries of the payments service is set to 3."
+  },
+  {
+    "entity": "primary_database",
+    "attribute": "engine",
+    "value": "PostgreSQL 15",
+    "source": "adr-014-db-timeouts.md",
+    "timestamp": "2024-02",
+    "confidence": 0.9,
+    "context_text": "The engine of the primary database is set to PostgreSQL 15."
+  },
+  {
+    "entity": "auth_service",
+    "attribute": "hashing_algorithm",
+    "value": "bcrypt",
+    "source": "security-policy-2022.pdf",
+    "timestamp": "2022-09",
+    "confidence": 0.85,
+    "context_text": "The hashing algorithm of the auth service is set to bcrypt."
+  },
+  {
+    "entity": "api_gateway",
+    "attribute": "max_payload_size",
+    "value": "10MB",
+    "source": "gateway-config-2024.yaml",
+    "timestamp": "2024-08",
+    "confidence": 0.95,
+    "context_text": "The max payload size of the api gateway is set to 10MB."
+  },
+  {
+    "entity": "order_queue",
+    "attribute": "visibility_timeout",
+    "value": "30s",
+    "source": "queue-spec-v2.pdf",
+    "timestamp": "2024-01",
+    "confidence": 0.9,
+    "context_text": "The visibility timeout of the order queue is set to 30s."
+  },
+  {
+    "entity": "notification_service",
+    "attribute": "batch_size",
+    "value": "500",
+    "source": "vendor-migration-adr-2024.md",
+    "timestamp": "2024-05",
+    "confidence": 0.85,
+    "context_text": "The batch size of the notification service is set to 500."
+  },
+  {
+    "entity": "file_storage",
+    "attribute": "encryption_standard",
+    "value": "AES-256",
+    "source": "storage-ops-2023.md",
+    "timestamp": "2023-07",
+    "confidence": 0.9,
+    "context_text": "The encryption standard of the file storage is set to AES-256."
+  },
+  {
+    "entity": "logging_pipeline",
+    "attribute": "log_format",
+    "value": "JSON",
+    "source": "observability-guide-2022.md",
+    "timestamp": "2022-10",
+    "confidence": 0.8,
+    "context_text": "The log format of the logging pipeline is set to JSON."
+  }
+]
